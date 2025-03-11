@@ -90,6 +90,8 @@ app.get("/msg/post/:msg/:user?", function(req, res){
 
 
 
-app.listen(8080); //commence à accepter les requêtes
-console.log("App listening on port 8080...");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`App listening on port ${port}...`);
+});
 
